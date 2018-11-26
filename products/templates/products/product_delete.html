@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Delete</h1>
+<div class="row justify-content-md-center">
+	<div class="col-md-6">
+		<form action= '.' method="POST" novalidate> {% csrf_token %}
+			<h3>Do you want to delete the product "{{ object.title }}"?</h3>
+			<div class="row justify-content-center">
+				<div class="col-2">
+					<input type='submit' value="Yes" class="btn btn-primary btn-block"/>
+				</div>
+				<div class="col-2">
+					<a href='../' type='butom' class="btn btn-warning btn-block">Cancel</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock content %}
